@@ -5,7 +5,7 @@ import App from "../App";
 
 function SearchBar() {
     return (
-        <form className="pt-2 relative text-gray-600 flex justify-center items-center ">
+        <form className="pt-2 relative text-gray-600 flex justify-center items-center mx-10 ">
         <input
           className="border-2 border-gray-300 bg-white h-10 max-w-md flex-grow px-5 pr-10 rounded-l-lg text-sm focus:outline-none"
           type="search" name="search" placeholder="Search" />

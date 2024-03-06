@@ -6,13 +6,14 @@ import "./App.css";
 function App() {
   return (
     <>
-     <header className="bg-cyan-400 h-12"></header>
+      <header className="bg-cyan-400 h-12"></header>
 
       <h1 className="mx-auto my-4 text-4xl font-extrabold text-center md:text-5xl lg:text-6xl">
         JobChaser
       </h1>
-      <main className="mx-auto max-w-screen-lg">
-        <SearchBar />
+      <SearchBar />
+      
+      <main className=" max-w-800 flex justify-center">
         <JobList jobs={jobs} />
       </main>
     </>
@@ -20,7 +21,6 @@ function App() {
 }
 
 export default App;
-
 
 // mx-auto: Centrerar elementet horisontellt genom att använda margin-left: auto; och margin-right: auto;.
 // my-4: Lägger till en margin på 4 REM både på toppen och botten av elementet.
