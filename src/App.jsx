@@ -12,8 +12,8 @@ function App() {
         JobChaser
       </h1>
       <SearchBar />
-      
-      <main className=" max-w-800 flex justify-center">
+
+      <main className=" flex justify-center">
         <JobList jobs={jobs} />
       </main>
     </>
@@ -21,15 +21,3 @@ function App() {
 }
 
 export default App;
-
-// mx-auto: Centrerar elementet horisontellt genom att använda margin-left: auto; och margin-right: auto;.
-// my-4: Lägger till en margin på 4 REM både på toppen och botten av elementet.
-// text-4xl: Sätter textstorleken till 4 REM.
-// font-extrabold: Sätter texten till fetstil (extrabold).
-// text-center: Centrerar texten horisontellt inom dess föräldreelement.
-// md:text-5xl: Sätter textstorleken till 5 REM för medium skärmstorlekar och större.
-// lg:text-6xl: Sätter textstorleken till 6 REM för stora skärmstorlekar och större.
-// För <main>-elementet:
-
-// mx-auto: Centrerar elementet horisontellt genom att använda margin-left: auto; och margin-right: auto;.
-// max-w-screen-lg: Sätter en maxbredd på 1000 px för elementet för att begränsa bredden på större skärmar.
