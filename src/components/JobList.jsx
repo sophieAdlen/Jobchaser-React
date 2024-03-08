@@ -1,7 +1,9 @@
-import App from "../App";
+
 
 function JobList({ jobs }) {
   return (
+    <>
+   
     <ul className="flex justify-center flex-wrap gap-10 m-10 max-w-800 "
     style={{ width: "1600px" }}
     >
@@ -34,6 +36,7 @@ function JobList({ jobs }) {
         </li>
       ))}
     </ul>
+    </>
   );
 }
 
