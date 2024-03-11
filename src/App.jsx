@@ -1,9 +1,20 @@
-import { jobs } from "./data";
+import React, { useState, useEffect } from "react";
 import JobList from "./components/JobList";
 import SearchBar from "./components/SearchBar";
+
 import "./App.css";
 
 function App() {
+  const [jobs, setJobs] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from JSON file
+    fetch("./data.json") // Hämta JSON-filen
+      .then(response => response.json())// Konvertera svaret till JSON
+      .then(data => setJobs(data)) // Uppdatera jobs med den hämtade datan
+      .catch(error => console.error("Error fetching data:", error));
+  }, []);
+
   return (
     <>
       <div></div>
@@ -14,7 +25,7 @@ function App() {
       </h1>
       <SearchBar />
 
-      <main className=" flex justify-center">
+      <main className="flex justify-center">
         {/* 
          Renderar antingen JobList-komponenten om det finns jobbdata att visa, 
          eller så renderar den ett "No Data Found"-meddelande om det inte finns någon data.
