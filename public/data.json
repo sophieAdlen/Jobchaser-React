@@ -18,20 +18,20 @@
     },
     {
       "id": 2,
-      "company": "Manage",
-      "logo": "manage.svg",
-      "position": "Fullstack Developer",
-      "role": "Fullstack",
-      "level": "Midweight",
-      "postedAt": "1d ago",
-      "contract": "Part Time",
-      "location": "Remote",
+      "company": "Github",
+      "logo": "github.svg",
+      "position": "Senior Fullstack Developer",
+      "role": "Fullsstack",
+      "level": "Senior",
+      "postedAt": "5d ago",
+      "contract": "Full Time",
+      "location": "USA Only",
       "languages": [
-        "Python"
+        "JavaScript"
+    
       ],
-      "tools": [
-        "React"
-      ]
+      "tools": [   
+       "React"]
     },
     {
       "id": 3,
@@ -173,5 +173,41 @@
         "React",
         "Sass"
       ]
-    }
+    },
+    {
+    "id": 12,
+    "company": "Spotify",
+    "logo": "android.svg",
+    "position": "Junior Fullstack Developer",
+    "role": "Fullsstack",
+    "level": "Junior",
+    "postedAt": "5d ago",
+    "contract": "Full Time",
+    "location": "Remote",
+    "languages": [
+      "JavaScript",
+      "React"
+    ],
+    "tools": [
+      "Vue",
+      "Sass"
+    ]
+  },
+  {
+    "id": 12,
+    "company": "Manage",
+    "logo": "manage.svg",
+    "position": "Fullstack Developer",
+    "role": "Fullstack",
+    "level": "Midweight",
+    "postedAt": "1d ago",
+    "contract": "Part Time",
+    "location": "Remote",
+    "languages": [
+      "Python"
+    ],
+    "tools": [
+      "React"
+    ]
+  }
   ]
