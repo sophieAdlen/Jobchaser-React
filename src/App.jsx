@@ -1,5 +1,6 @@
 // App.jsx
 import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
 import JobList from "./components/JobList";
 import SearchBar from "./components/SearchBar";
 import "./App.css";
@@ -7,7 +8,7 @@ import "./App.css";
 function App() {
   const [jobs, setJobs] = useState([]); // State för alla jobb
   const [filteredJobs, setFilteredJobs] = useState([]); // State för filtrerade jobb
-  const [searchTerm, setSearchTerm] = useState(""); // State för söktermen
+  
 
   useEffect(() => {
     // Fetch data from JSON file
@@ -34,17 +35,14 @@ function App() {
 
   return (
     <>
-      <header className="bg-cyan-400 h-12"></header>
-      <h1 className="mx-auto my-4 text-4xl font-extrabold text-center md:text-5xl lg:text-6xl">
-        JobChaser
-      </h1>
+    <Header />
       <SearchBar onSearch={handleSearch} />{" "}
       {/* Skicka handleSearch-funktionen som prop */}
       <main className="flex justify-center">
         <JobList jobs={filteredJobs} />{" "}
         {/* Skicka filtrerade jobblistan som prop */}
       </main>
-    </>
+      </>
   );
 }
 

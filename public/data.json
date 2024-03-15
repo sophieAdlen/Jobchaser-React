@@ -176,7 +176,7 @@
     },
     {
     "id": 12,
-    "company": "Spotify",
+    "company": "Android",
     "logo": "android.svg",
     "position": "Junior Fullstack Developer",
     "role": "Fullsstack",
@@ -185,16 +185,15 @@
     "contract": "Full Time",
     "location": "Remote",
     "languages": [
-      "JavaScript",
-      "React"
+      "JavaScript"
     ],
     "tools": [
-      "Vue",
+      "React",
       "Sass"
     ]
   },
   {
-    "id": 12,
+    "id": 13,
     "company": "Manage",
     "logo": "manage.svg",
     "position": "Fullstack Developer",
