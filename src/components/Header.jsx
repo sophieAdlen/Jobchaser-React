@@ -20,15 +20,15 @@ function Header(){
 
                         {/* Större skärmar - navigationslänkar */} 
                         <div className="items-center justify-between hidden gap-12 text-black md:flex">
-                            <a className="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="javascript:void(0)">Jobs</a>
-                            <a className="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="javascript:void(0)">About</a>
-                            <a className="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="javascript:void(0)">Contact</a>
+                            <a className="text-lg font-normal text-dark-grey-700 hover:underline" href="javascript:void(0)">Jobs</a>
+                            <a className="text-lg font-normal text-dark-grey-700 hover:underline" href="javascript:void(0)">About</a>
+                            <a className="text-lg font-normal text-dark-grey-700 hover:underline" href="javascript:void(0)">Contact</a>
                         </div>
 
                          {/* Inloggning och registrering */}
                         <div className="items-center hidden gap-8 md:flex">
-                            <button className="flex items-center text-sm font-normal text-gray-800 hover:text-gray-900 transition duration-300">Log In</button>
-                            <button className="flex items-center px-4 py-2 text-sm font-bold rounded-xl bg-purple-blue-100 text-purple-blue-600 hover:bg-purple-blue-600 hover:text-white transition duration-300">
+                            <button className="flex items-center text-lg font-normal hover:underline">Log In</button>
+                            <button className="flex items-center px-4 py-2 text-lg font-bold hover:underline">
                                 Sign Up
                             </button>
                         </div>
@@ -47,7 +47,7 @@ function Header(){
                             <a className="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="javascript:void(0)">Contact</a>
                             
                             <button className="flex items-center text-sm font-normal text-black">Log In</button>
-                            <button className="flex items-center px-4 py-2 text-sm font-bold rounded-xl bg-purple-blue-100 text-purple-blue-600 hover:bg-purple-blue-600 hover:text-white transition duration-300">Sign Up</button>
+                            <button className="flex items-center px-4 py-2 text-sm font-bold ">Sign Up</button>
                         </div>
                     </nav>
 

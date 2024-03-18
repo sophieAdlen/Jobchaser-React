@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function JobList({ jobs }) {
   const [showPopup, setShowPopup] = useState(false);
@@ -7,11 +7,19 @@ function JobList({ jobs }) {
   const handleMoreInfoClick = (job) => {
     setSelectedJob(job);
     setShowPopup(true);
+    document.body.classList.add('popup-open');
   };
 
   const closePopup = () => {
     setShowPopup(false);
+    document.body.classList.add('popup-open');
   };
+
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove('popup-open'); // Se till att klassen tas bort när komponenten avmonteras
+    };
+  }, []);
 
   return (
     <>
@@ -62,6 +70,19 @@ function JobList({ jobs }) {
             </p>
             <br />
              <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam natus accusamus! 
+            Corrupti dolore molestiae rerum perferendis in veritatis sapiente alias facilis unde culpa placeat modi, 
+            ipsum porro, reprehenderit accusamus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam
+            natus accusamus! Corrupti dolore molestiae rerum perferendis in veritatis sapiente alias facilis unde culpa placeat modi,
+            ipsum porro, reprehenderit accusamus?
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam natus accusamus! 
+            Corrupti dolore molestiae rerum perferendis in veritatis sapiente alias facilis unde culpa placeat modi, 
+            ipsum porro, reprehenderit accusamus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam
+            natus accusamus! Corrupti dolore molestiae rerum perferendis in veritatis sapiente alias facilis unde culpa placeat modi,
+            ipsum porro, reprehenderit accusamus?
+            <br />
+            <br />
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam natus accusamus! 
             Corrupti dolore molestiae rerum perferendis in veritatis sapiente alias facilis unde culpa placeat modi, 
             ipsum porro, reprehenderit accusamus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam
