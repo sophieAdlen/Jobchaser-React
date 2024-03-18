@@ -17,7 +17,7 @@ function JobList({ jobs }) {
 
   useEffect(() => {
     return () => {
-      document.body.classList.remove('popup-open'); // Se till att klassen tas bort när komponenten avmonteras
+      document.body.classList.remove('popup-open');
     };
   }, []);
 

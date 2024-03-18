@@ -1,8 +1,9 @@
 // App.jsx
 import React, { useState, useEffect } from "react";
-import Header from "./components/Header";
+import Header from "./components/header";
 import JobList from "./components/JobList";
 import SearchBar from "./components/SearchBar";
+import Footer from "./components/footer";
 import "./App.css";
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <JobList jobs={filteredJobs} />{" "}
         {/* Skicka filtrerade jobblistan som prop */}
       </main>
+      <Footer />
       </>
   );
 }

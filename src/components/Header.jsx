@@ -21,13 +21,16 @@ function Header(){
                         {/* Större skärmar - navigationslänkar */} 
                         <div className="items-center justify-between hidden gap-12 text-black md:flex">
                             <a className="text-lg font-normal text-dark-grey-700 hover:underline" href="javascript:void(0)">Jobs</a>
+                            <p>|</p>
                             <a className="text-lg font-normal text-dark-grey-700 hover:underline" href="javascript:void(0)">About</a>
+                            <p>|</p>
                             <a className="text-lg font-normal text-dark-grey-700 hover:underline" href="javascript:void(0)">Contact</a>
                         </div>
 
                          {/* Inloggning och registrering */}
                         <div className="items-center hidden gap-8 md:flex">
                             <button className="flex items-center text-lg font-normal hover:underline">Log In</button>
+                            <p>|</p>
                             <button className="flex items-center px-4 py-2 text-lg font-bold hover:underline">
                                 Sign Up
                             </button>
