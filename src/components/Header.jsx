@@ -6,7 +6,7 @@ function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="bg-white" style={{ width: '100vw' }}>
+        <header className="" style={{ width: '100vw' }}>
             <div className="flex flex-col">
                 {/* Navigationsmeny */}
                 <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -20,7 +20,7 @@ function Header() {
                         </p>
                     </div>
                     <div className="items-center justify-end hidden col-span-1 md:flex">
-                        <img className="w-full" src="/images/JobChaser.jpg" alt="header image"/>
+                        <img className="w-full" src="/images/JobChaser.png" alt="header image"/>
                     </div>
                 </div>
             </div>

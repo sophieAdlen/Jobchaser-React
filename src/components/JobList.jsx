@@ -27,7 +27,7 @@ function JobList({ jobs }) {
         {jobs.map((job) => (
           <li
             key={job.id}
-            className="jobCards flex flex-col items-center gap-6 border-solid border-2 border-extraBlue p-2 max-w-87 rounded-lg relative" 
+            className="jobCards bg-[#ffffffc3] flex flex-col items-center gap-6 border-solid border-2 border-extraBlue p-2 max-w-87 rounded-lg relative" 
             style={{ maxWidth: "22rem", width: '100%' }}
             tabIndex={0} aria-label={`job ad for ${job.company}`}
           >

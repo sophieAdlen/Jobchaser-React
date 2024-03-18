@@ -4,7 +4,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 function Navigation({ isOpen, setIsOpen }) {
     return (
-        <nav className="bg-mainBlue relative flex flex-wrap items-center justify-between w-full group p-7 shrink-0 font-extrabold lg:text-2xl ">
+        <nav className="relative flex flex-wrap items-center justify-between w-full group p-7 shrink-0 font-extrabold lg:text-2xl ">
             {/* Logotyp */}
             <a href="/homepage">
                 <h2>J <span className='text-extraBlue'><FontAwesomeIcon icon={faSearch} /></span> bchaser</h2>

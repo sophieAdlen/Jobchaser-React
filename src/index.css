@@ -4,8 +4,9 @@
 
    body{
     overflow-x: hidden;
-    
+    background: linear-gradient(118deg, rgba(255,255,255,1) 7%, rgba(187,212,240,1) 22%, rgba(198,221,246,1) 38%, rgba(255,255,255,1) 55%, rgba(230,239,248,1) 71%, rgba(201,220,241,1) 88%, rgba(138,185,237,1) 100%);
    }
+   
 .searchBtn:hover {
     background-color: #3C94F8ff; 
   }
@@ -59,7 +60,7 @@
   }
   body.popup-open {
     overflow: hidden;
-    /* backdrop-filter: blur(5px); */
+ 
 
 
   }
@@ -67,7 +68,7 @@
   .close-btn {
   background-color:  #3C94F8ff;
   border-radius: 10px;
-  color: #ffffff;
+  color: #fff;
   padding: 0.5rem;
   margin: 1rem;
   }
