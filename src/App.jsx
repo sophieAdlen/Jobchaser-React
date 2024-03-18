@@ -1,5 +1,6 @@
-// App.jsx
+
 import React, { useState, useEffect } from "react";
+import Navigation from "./components/Navbar";
 import Header from "./components/header";
 import JobList from "./components/JobList";
 import SearchBar from "./components/SearchBar";
@@ -33,7 +34,7 @@ function App() {
     );
     setFilteredJobs(filtered); // Uppdatera filtrerade jobblistan
   };
-
+ 
   return (
     <>
     <Header />
