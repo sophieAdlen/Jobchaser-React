@@ -10,6 +10,7 @@ function Header() {
             <div className="flex flex-col">
                 {/* Navigationsmeny */}
                 <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
+                {/* <DarkMode/> */}
 
                 {/* Innehåll */}
                 <div className="grid w-full grid-cols-1 m-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5 p-10">

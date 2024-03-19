@@ -15,7 +15,7 @@ function SearchBar({ onSearch }) {
   return (
     <form
       onSubmit={handleSearch}
-      className="pt-2 relative text-gray-600 flex justify-center items-center mx-10 mb-10"
+      className="pt-2 relative flex justify-center items-center mx-10 mb-10"
     >
       <input
         className=" border bg-white h-12 max-w-md flex-grow px-5 pr-10 rounded-xl text-l "

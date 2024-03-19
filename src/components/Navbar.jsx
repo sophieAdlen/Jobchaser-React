@@ -4,7 +4,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 function Navigation({ isOpen, setIsOpen }) {
     return (
-        <nav className="relative flex flex-wrap items-center justify-between w-full group p-7 shrink-0 font-extrabold lg:text-2xl ">
+        <nav className="relative flex flex-wrap items-center justify-between w-full group p-7 shrink-0 font-extrabold lg:text-2xl text-dark-grey-700text-dark-grey-700  ">
             {/* Logotyp */}
             <a href="/homepage">
                 <h2>J <span className='text-extraBlue'><FontAwesomeIcon icon={faSearch} /></span> bchaser</h2>
@@ -22,9 +22,9 @@ function Navigation({ isOpen, setIsOpen }) {
 
             {/* Inloggning och registrering */}
             <div className="items-center hidden gap-8 md:flex">
-                <button className="flex items-center text-lg font-normal hover:underline">Log In</button>
+                <button className="flex items-center text-lg font-normal text-dark-grey-700 hover:underline">Log In</button>
                 <p>|</p>
-                <button className="flex items-center px-4 py-2 text-lg font-bold hover:underline">
+                <button className="flex items-center px-4 py-2 text-lg text-dark-grey-700 font-bold hover:underline">
                     Sign Up
                 </button>
             </div>
@@ -38,9 +38,9 @@ function Navigation({ isOpen, setIsOpen }) {
 
             {/* Dropdownmeny för mindre skärmar */}
             <div className={`bg-mainBlue flex md:hidden transition-all duration-300 ease-in-out flex-col items-start shadow-main justify-center w-full gap-3 overflow-hidden bg-white ${isOpen ? 'max-h-64 py-4' : 'max-h-0 py-0' } px-4 rounded-2xl top-full`}>
-                <a className="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Jobs</a>
-                <a className="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">About</a>
-                <a className="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Contact</a>
+                <a className="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="/homepage">Jobs</a>
+                <a className="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="/about">About</a>
+                <a className="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="/contact">Contact</a>
                 
                 <button className="flex items-center text-sm font-normal text-black">Log In</button>
                 <button className="flex items-center px-4 py-2 text-sm font-bold ">Sign Up</button>

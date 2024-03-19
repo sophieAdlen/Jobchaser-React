@@ -33,25 +33,25 @@ function JobList({ jobs }) {
           >
             <img className="Cardlogo w-28 rounded-full mt-4" src={`./src/assets/${job.logo}`} alt="" />
             <div className="flex flex-col justify-center items-center mt-3">
-              <h2 className="cardPosition text-2xl font-bold text-gray-800">{job.position}</h2>
-              <p className="text-2xl text-gray-800 ">{job.company}</p>
-              <p className="text-xl text-gray-800">{job.location}</p>
+              <h2 className="cardPosition text-2xl font-bold">{job.position}</h2>
+              <p className="text-2xl ">{job.company}</p>
+              <p className="text-xl">{job.location}</p>
             </div>
             <div className="info-section flex gap-0 mt-18">
-              <p className="text-l text-gray-800 mx-2 bg-mainBlue rounded-lg p-2">{job.role}</p>
-              <p className="text-l text-gray-800 mx-2 bg-mainBlue rounded-lg p-2 ">{job.contract}</p>
-              <p className="text-l text-gray-800 mx-2 bg-mainBlue rounded-lg p-2 ">{job.level}</p>
+              <p className="text-l mx-2 bg-mainBlue rounded-lg p-2">{job.role}</p>
+              <p className="text-l mx-2 bg-mainBlue rounded-lg p-2 ">{job.contract}</p>
+              <p className="text-l mx-2 bg-mainBlue rounded-lg p-2 ">{job.level}</p>
             </div>
             <div className="tag-section flex gap-0 mt-18">
               {job.languages.map((languages, index) => (
-                <p className="text-sm text-gray-800 mx-2 border-solid border-2 border-extraBlue rounded-lg p-2" key={index}>{languages} </p>
+                <p className="text-sm mx-2 border-solid border-2 border-extraBlue rounded-lg p-2" key={index}>{languages} </p>
               ))}
               {job.tools.map((tools, index) => (
-                <p className="text-sm text-gray-800 mx-2 border-solid border-2 border-extraBlue rounded-lg p-2" key={index}>{tools} </p>
+                <p className="text-sm mx-2 border-solid border-2 border-extraBlue rounded-lg p-2" key={index}>{tools} </p>
               ))}
             </div>
-            <p className="absolute top-0 right-0 text-s text-gray-800 m-2">{job.postedAt}</p>
-            <p className="more-info-btn mb-2 flex text-l text-gray-800"><button onClick={() => handleMoreInfoClick(job)}>More info</button></p>
+            <p className="absolute top-0 right-0 text-s m-2">{job.postedAt}</p>
+            <p className="more-info-btn mb-2 flex text-l"><button onClick={() => handleMoreInfoClick(job)}>More info</button></p>
           </li>
         ))}
       </ul>

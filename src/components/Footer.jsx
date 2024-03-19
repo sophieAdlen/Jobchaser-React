@@ -5,8 +5,8 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 py-8 px-10 font-sans">
-          <hr className='m-4 border-gray-300'/>
+    <footer className=" py-8 px-10 mt-10">
+          <hr className='m-4'/>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-">
         <div className="lg:flex lg:items-center">
         <a href="/homepage">
@@ -46,7 +46,7 @@ function Footer() {
             </ul>
         </div>
       </div>
-      <p className='text-gray-300 text-sm mt-8 flex justify-center items-center'>© 2024 | All Rights Reserved.
+      <p className='text-sm mt-8 flex justify-center items-center'>© 2024 | All Rights Reserved.
       </p>
     </footer>
   );

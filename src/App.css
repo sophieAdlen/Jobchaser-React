@@ -5,3 +5,114 @@
 }
    */
   
+  
+   .searchBtn:hover {
+    background-color: #3C94F8ff; 
+  }
+
+  .jobCards {
+ 
+    transition: transform 0.3s ease; 
+    }
+  
+  .jobCards:hover {
+    transform: scale(1.05);
+  }
+
+
+  .more-info-btn{
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  .more-info-btn:hover{
+   color: #3C94F8ff; 
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    background-color: #CCE6FFff;
+    border: 1px solid #ccc;
+    padding: 4rem;
+    max-width: 1000px; 
+    width: 100%;
+    max-height: 90vh; 
+    overflow-y: auto; 
+    z-index: 999; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .popup-content {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    max-width: 800px;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  body.popup-open {
+    overflow: hidden;
+ 
+
+
+  }
+
+  .close-btn {
+  background-color:  #3C94F8ff;
+  border-radius: 10px;
+  color: #fff;
+  padding: 0.5rem;
+  margin: 1rem;
+  }
+  
+/*   
+  .jobCards {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    perspective: 500px;
+  }
+  
+  
+  .jobCards:hover {
+    transform: rotateY(180deg); 
+  }
+  
+ 
+  
+  .back {
+    position: absolute;
+    transform: rotateY(180deg); /* Rotera baksidan av kortet 180 grader */
+    /* background-color: beige;
+    backface-visibility: hidden; */
+   
+  
+
+  
+
+  
+@media (max-width: 500px) {
+
+    .text-header{
+         margin: 1rem;
+    }
+
+    .Cardlogo {
+      width: 8rem; 
+      height: 8rem;
+      margin-bottom: 0;
+    }
+  
+    .cardPosition {
+       font-size: 1.4rem;
+    }
+  
+  }
+
