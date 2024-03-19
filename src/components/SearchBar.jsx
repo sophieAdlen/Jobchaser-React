@@ -18,14 +18,14 @@ function SearchBar({ onSearch }) {
       className="pt-2 relative text-gray-600 flex justify-center items-center mx-10 mb-10"
     >
       <input
-        className=" border bg-white h-10 max-w-md flex-grow px-5 pr-10 rounded-l-lg text-sm "
+        className=" border bg-white h-12 max-w-md flex-grow px-5 pr-10 rounded-xl text-l "
         type="search"
         name="search"
         placeholder="Search"
       />
       <button
         type="submit"
-        className=" searchBtn bg-mainBlue py-2 px-5 rounded-r-lg "
+        className=" searchBtn bg-mainBlue py-2 px-5 rounded-xl "
       >
         <FontAwesomeIcon icon={faSearch} />
       </button>

@@ -44,10 +44,10 @@ function JobList({ jobs }) {
             </div>
             <div className="tag-section flex gap-0 mt-18">
               {job.languages.map((languages, index) => (
-                <p className="text-l text-gray-800 mx-2 border-solid border-2 border-extraBlue rounded-lg p-2" key={index}>{languages} </p>
+                <p className="text-sm text-gray-800 mx-2 border-solid border-2 border-extraBlue rounded-lg p-2" key={index}>{languages} </p>
               ))}
               {job.tools.map((tools, index) => (
-                <p className="text-l text-gray-800 mx-2 border-solid border-2 border-extraBlue rounded-lg p-2" key={index}>{tools} </p>
+                <p className="text-sm text-gray-800 mx-2 border-solid border-2 border-extraBlue rounded-lg p-2" key={index}>{tools} </p>
               ))}
             </div>
             <p className="absolute top-0 right-0 text-s text-gray-800 m-2">{job.postedAt}</p>
@@ -59,7 +59,7 @@ function JobList({ jobs }) {
       {/* Popup rutan */}
       {showPopup && (
         <div className="popup">
-            <button className="close-btn absolute top-0 right-0 " onClick={closePopup}>Close</button>
+            <button className="close-btn absolute top-0 right-0 " onClick={closePopup} aria-label={close}>Close</button>
           <div className="popup-content">
            <h2 className='text-2xl mb-8'>Job Description</h2>
            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam natus accusamus! 

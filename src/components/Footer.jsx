@@ -33,7 +33,7 @@ function Footer() {
             </ul>
         </div>
         <div className="md:flex md:item-center mt-8">
-            <ul className="md:flex md:space-x-6 max-md:space-y-2">
+            <ul className="md:flex md:space-x-6 max-md:space-y-8">
                 <li>
                     <p className= 'text-lg'>About Us</p>
                 </li>
@@ -57,5 +57,3 @@ export default Footer;
 
 
 
-
-// 2024 JobChaser | All Right Reserved
