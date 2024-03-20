@@ -10,15 +10,15 @@ function Contact() {
     <>
     <Navigation />
     <div className="contact-main flex items-center justify-center py-10 ">
-      <div className="max-w-6xl bg-bgWhite border-8 border-mainBlue rounded-lg">
+      <div className="max-w-6xl shadow-2xl  rounded-lg">
         <div className="grid md:grid-cols-2 items-center gap-16 sm:p-10 p-4 ">
           <div>
-            <h1 className="text-4xl font-extrabold text-white">Get in Touch</h1>
+            <h1 className="text-4xl font-extrabold">Get in Touch</h1>
             <p className="text-sm mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus ducimus voluptas accusantium tenetur? Vitae, corporis.</p>
             <ul className="mt-12 space-y-8">
               <li className="flex items-center">
                <FontAwesomeIcon icon={faEnvelope} />
-                <a href="mailto:info@example.com" className="text-white text-sm ml-3">
+                <a href="mailto:info@example.com" className="">
                   <strong>info@example.com</strong>
                 </a>
               </li>
@@ -57,25 +57,25 @@ function Contact() {
             <form action="" className="w-full">
               <div className="flex flex-wrap -mx-3 mb-6">
                 <div className="w-full px-3">
-                  <label htmlFor="name" className="block uppercase tracking-wide text-white text-xs font-bold mb-2 ">Full Name</label>
-                  <input type="text" id="name" placeholder="Your Name" className="appearance-none block w-full bg-mainBlue text-white border border-mainBlue rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" />
+                  <label htmlFor="name" className="px-1 text-sm font-semibold  ">Full Name</label>
+                  <input type="text" id="name" placeholder="Your Name" className="appearance-none block w-full mb-3 leading-tight text-md  px-3 py-2 rounded-lg shadow-md focus:outline-none" />
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-6">
                 <div className="w-full px-3">
-                  <label htmlFor="email" className="block uppercase tracking-wide text-white text-xs font-bold mb-2 ">Email Address</label>
-                  <input type="email" id="email" placeholder="Your Email" className="appearance-none block w-full bg-mainBlue text-white border border-mainBlue rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" />
+                  <label htmlFor="email" className="px-1 text-sm font-semibold  ">Email Address</label>
+                  <input type="email" id="email" placeholder="Your Email" className="appearance-none block w-full mb-3 leading-tight text-md  px-3 py-2 rounded-lg shadow-md focus:outline-none" />
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-6">
                 <div className="w-full px-3">
-                  <label htmlFor="message" className="block uppercase tracking-wide text-white text-xs font-bold mb-2 ">Message</label>
-                  <textarea id="message" rows="6" placeholder="Your Message" className="no-resize appearance-none block w-full bg-mainBlue text-white border border-mainBlue rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"></textarea>
+                  <label htmlFor="message" className="px-1 text-sm font-semibold  ">Message</label>
+                  <textarea id="message" rows="6" placeholder="Your Message" className="no-resize appearance-none w-full mb-3 leading-tight text-md  px-3 py-2 rounded-lg shadow-md focus:outline-none"></textarea>
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-6">
                 <div className="w-full px-3">
-                  <button type="button" className="w-full bg-extraBlue hover:bg-[#89c0f4;] text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline ">Send Message <FontAwesomeIcon icon={faPaperPlane} /></button>
+                  <button type="button" className="w-full bg-extraBlue hover:bg-[#89c0f4;] text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline ">Send Message <FontAwesomeIcon icon={faPaperPlane} /></button>
                 </div>
               </div>
             </form>

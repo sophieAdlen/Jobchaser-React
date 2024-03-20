@@ -1,9 +1,8 @@
-import React from "react";
 
 import Card from "./AboutCards";
 import Navigation from "./Navbar";
 import Footer from "./footer";
-import { Container } from "postcss";
+
 
   function AboutPage() {
     return (
