@@ -5,10 +5,10 @@ import App from "./App";
 
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import AboutPage from "./components/AboutPage";
-import ContactPage from "./components/Contactpage";
-import RegisterForm from "./components/RegsterForm";
-import LoginForm from "./components/LoginForm";
+import AboutPage from "./components/Pages/AboutPage";
+import ContactPage from "./components/Pages/Contactpage";
+import RegisterPage from "./components/Pages/SignINpage";
+import LoginPage from "./components/Pages/LoginPage";
 
 const router = createBrowserRouter([
   {
@@ -25,11 +25,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/signUp",
-    element: <RegisterForm />
+    element: <RegisterPage />
   },
   {
     path: "/login",
-    element: <LoginForm/>
+    element: <LoginPage/>
   },
 ]);
 

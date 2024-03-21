@@ -25,7 +25,7 @@ function SearchBar({ onSearch }) {
       />
       <button
         type="submit"
-        className=" searchBtn bg-mainBlue py-2 px-5 rounded-xl "
+        className=" searchBtn  ml-2 h-12 bg-extraBlue py-2 px-5 rounded-xl "
       >
         <FontAwesomeIcon icon={faSearch} />
       </button>

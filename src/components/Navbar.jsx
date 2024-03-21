@@ -43,7 +43,7 @@ function Navigation({ isOpen, setIsOpen }) {
                 <a className="text-sm font-normal hover:underline" href="/contact">Contact</a>
                 
                <a className="flex items-center text-sm font-normal text-black" href="login" >Log In</a> 
-                <a className="text-sm font-normal" href="signUp">Sign Up</a>
+                <a className="text-lg font-bold" href="signUp">Sign Up</a>
             </div>
         </nav>
     );

@@ -1,7 +1,7 @@
 
-import Card from "./AboutCards";
-import Navigation from "./Navbar";
-import Footer from "./footer";
+import Card from "../AboutCards";
+import Navigation from "../Navbar";
+import Footer from "../footer";
 
 
   function AboutPage() {

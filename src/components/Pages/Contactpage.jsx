@@ -1,5 +1,5 @@
-import Navigation from "./Navbar"
-import Footer from "./footer"
+import Navigation from "../Navbar"
+import Footer from "../footer"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faEnvelope, faPhone, faMapLocation, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 
@@ -18,19 +18,19 @@ function Contact() {
             <ul className="mt-12 space-y-8">
               <li className="flex items-center">
                <FontAwesomeIcon icon={faEnvelope} />
-                <a href="mailto:info@example.com" className="">
+                <a href="mailto:info@example.com" className=" text-sm ml-3 ">
                   <strong>info@example.com</strong>
                 </a>
               </li>
               <li className="flex items-center">
               <FontAwesomeIcon icon={faPhone} />
-                <a href="tel:+158996888" className="text-white text-sm ml-3 ">
+                <a href="tel:+158996888" className=" text-sm ml-3 ">
                   <strong>+158 996 888</strong>
                 </a>
               </li>
               <li className="flex items-center">
               <FontAwesomeIcon icon={faMapLocation } />
-                <a href="" className="text-white text-sm ml-3 ">
+                <a href="" className=" text-sm ml-3 ">
                   <strong>123 Street 256 House</strong>
                 </a>
               </li>
