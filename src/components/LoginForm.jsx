@@ -121,7 +121,7 @@ function LoginForm() {
               </div>
               <button
                 type="submit"
-                className="mt-3 text-lg font-semibold bg-extraBlue w-full rounded-lg px-6 py-3 block"
+                className="mt-3 text-lg font-semibold bg-extraBlue hover:bg-[#89c0f4;]  w-full rounded-lg px-6 py-3 block"
               >
                 Login
               </button>

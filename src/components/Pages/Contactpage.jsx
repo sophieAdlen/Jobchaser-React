@@ -75,7 +75,7 @@ function Contact() {
               </div>
               <div className="flex flex-wrap -mx-3 mb-6">
                 <div className="w-full px-3">
-                  <button type="button" className="w-full bg-extraBlue hover:bg-[#89c0f4;] text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline ">Send Message <FontAwesomeIcon icon={faPaperPlane} /></button>
+                  <button type="button" className="w-full bg-extraBlue hover:bg-[#89c0f4;] font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline ">Send Message <FontAwesomeIcon icon={faPaperPlane} /></button>
                 </div>
               </div>
             </form>

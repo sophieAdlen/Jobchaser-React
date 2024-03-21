@@ -1,19 +1,19 @@
 import Navigation from "../Navbar";
 import Footer from "../footer";
-import SigninForm from "../SignupForm";
+import SignupForm from "../SignupForm"
 
 
-function RegisterPage() {
+function SignupPage() {
   
 
   return (
     <>
       <Navigation />
-      <SigninForm />
+      <SignupForm />
       <Footer />
   </>
 );
 }
 
-export default RegisterPage;
+export default SignupPage;
 

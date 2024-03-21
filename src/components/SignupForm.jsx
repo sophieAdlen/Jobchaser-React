@@ -7,7 +7,7 @@ import {auth} from "../firebase-config";
 
 
 
-function SigninForm() {
+function SignupForm() {
 const navigate = useNavigate();
 
     const {
@@ -214,7 +214,8 @@ const navigate = useNavigate();
                                 <div className="w-full px-3">
                                     <button
                                         type="submit"
-                                        className="block w-full max-w-xs mx-auto mb-4 bg-extraBlue hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
+                                        className="block w-full max-w-xs mx-auto mb-4 
+                                        bg-extraBlue hover:bg-[#89c0f4;] focus:bg-indigo-700 rounded-lg px-3 py-3 font-semibold"
                                     >
                                         REGISTER NOW
                                     </button>
@@ -232,4 +233,4 @@ const navigate = useNavigate();
 }
 
 
-export default SigninForm;
+export default SignupForm;
