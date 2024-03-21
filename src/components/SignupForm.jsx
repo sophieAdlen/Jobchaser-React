@@ -1,9 +1,15 @@
 import { useForm } from "react-hook-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import {createUserWithEmailAndPassword} from "firebase/auth";
+import {auth} from "../firebase-config";
+
+
 
 function SigninForm() {
+const navigate = useNavigate();
+
     const {
         register,
         handleSubmit,
@@ -14,6 +20,20 @@ function SigninForm() {
 
     const onSubmit = (data) => {
         console.log("Form Submitted: ", data);
+        
+        // ropa på firebase sign up funktion
+        createUserWithEmailAndPassword(auth, data.email,data.password)
+  .then(() => {
+    // Signed up 
+    navigate("/login")
+    // ...
+  })
+  .catch((error) => {
+    console.error("Error creating user", error);
+    
+  });
+
+        
 
 
     };
@@ -35,7 +55,7 @@ function SigninForm() {
                     </div>
                     <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
                         <div className="text-center mb-10">
-                            <h1 className="font-bold text-3xl">SIGN IN</h1>
+                            <h1 className="font-bold text-3xl">SIGN UP</h1>
                             <p>Enter your information to register</p>
                         </div>
 
