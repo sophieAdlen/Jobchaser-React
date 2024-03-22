@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Navigate } from 'react-router-dom';
 
 function JobList({ jobs }) {
   const [showPopup, setShowPopup] = useState(false);
@@ -23,6 +24,7 @@ function JobList({ jobs }) {
 
   return (
     <>
+    <Navigate />
       <ul className="flex justify-center flex-wrap gap-10 m-10 max-w-800 " style={{ width: "1600px" }}>
         {jobs.map((job) => (
           <li
@@ -92,6 +94,7 @@ function JobList({ jobs }) {
           </div>
         </div>
       )}
+      <Footer/>
     </>
   );
 }

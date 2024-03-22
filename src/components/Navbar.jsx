@@ -13,7 +13,7 @@ function Navigation({ isOpen, setIsOpen }) {
             
             {/* Större skärmar - navigationslänkar */}
             <div className="items-center justify-between hidden gap-12 text-black md:flex">
-                <a className="text-lg font-normal hover:underline" href="/">Jobs</a>
+                <a className="text-lg font-normal hover:underline" href="">Jobs</a>
                 <p>|</p>
                 <a className="text-lg font-normal hover:underline" href="/about">About</a>
                 <p>|</p>
@@ -22,9 +22,9 @@ function Navigation({ isOpen, setIsOpen }) {
 
             {/* Inloggning och registrering */}
             <div className="items-center hidden gap-8 md:flex">
-                <a className="flex items-center text-lg font-normal hover:underline" href="login">Log In</a>
+                <a className="flex items-center text-lg font-normal hover:underline" href="/login">Log In</a>
                 <p>|</p>
-                <a className="flex items-center px-4 py-2 text-lg font-bold hover:underline" href="signUp">
+                <a className="flex items-center px-4 py-2 text-lg font-bold hover:underline" href="/signup">
                     Sign Up
                 </a>
             </div>
@@ -42,8 +42,8 @@ function Navigation({ isOpen, setIsOpen }) {
                 <a className="text-sm font-normal hover:underline" href="/about">About</a>
                 <a className="text-sm font-normal hover:underline" href="/contact">Contact</a>
                 
-               <a className="flex items-center text-sm font-normal text-black" href="login" >Log In</a> 
-                <a className="text-lg font-bold" href="signUp">Sign Up</a>
+               <a className="flex items-center text-sm font-normal text-black" href="/login" >Log In</a> 
+                <a className="text-lg font-bold" href="/signup">Sign Up</a>
             </div>
         </nav>
     );
