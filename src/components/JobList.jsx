@@ -1,9 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import { Navigate } from 'react-router-dom';
+import Navigation from './Navbar';
+import Footer from './Footer';
+import SearchBar from './SearchBar';
 
-function JobList({ jobs }) {
+function JobList() {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
+  const [jobs, setJobs] = useState([]); // State för alla jobb
+  const [filteredJobs, setFilteredJobs] = useState([]); // State för filtrerade jobb
+
+  useEffect(() => {
+    // Fetch data from JSON file
+    fetch("./data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setJobs(data); // Uppdatera alla jobb från JSON-filen
+        setFilteredJobs(data); // Initialt visas alla jobb
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
+  // Funktion för att hantera sökningen
+  const handleSearch = (term) => {
+    const filtered = jobs.filter((job) =>
+      Object.values(job).some(
+        (value) =>
+          typeof value === "string" &&
+          value.toLowerCase().includes(term.toLowerCase())
+      )
+    );
+    setFilteredJobs(filtered); // Uppdatera filtrerade jobblistan
+  };
 
   const handleMoreInfoClick = (job) => {
     setSelectedJob(job);
@@ -24,9 +51,11 @@ function JobList({ jobs }) {
 
   return (
     <>
-    <Navigate />
+    <Navigation />
+    <SearchBar onSearch={handleSearch} /> 
+    <main className="flex justify-center">
       <ul className="flex justify-center flex-wrap gap-10 m-10 max-w-800 " style={{ width: "1600px" }}>
-        {jobs.map((job) => (
+        {filteredJobs.map((job) => (
           <li
             key={job.id}
             className="jobCards bg-[#ffffffc3] flex flex-col items-center gap-6 border-solid border-2 border-extraBlue p-2 max-w-87 rounded-lg relative" 
@@ -94,8 +123,9 @@ function JobList({ jobs }) {
           </div>
         </div>
       )}
+   </main>
       <Footer/>
-    </>
+      </>
   );
 }
 

@@ -1,6 +1,6 @@
 
 import Navigation from "../Navbar";
-import Footer from "../footer";
+import Footer from "../Footer";
 import LoginForm from "../LoginForm";
 
 function LoginPage() {
