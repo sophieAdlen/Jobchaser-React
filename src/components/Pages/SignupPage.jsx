@@ -10,7 +10,6 @@ function SignupPage() {
     <>
       <Navigation />
       <SignupForm />
-      <Footer />
   </>
 );
 }

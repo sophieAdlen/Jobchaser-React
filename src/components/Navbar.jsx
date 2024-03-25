@@ -1,8 +1,22 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { auth } from "../firebase-config";
+import { signOut } from "firebase/auth"; // Importera signOut från firebase/auth
 
 function Navigation({ isOpen, setIsOpen }) {
+
+    const handleSignOut = () => {
+        signOut(auth)
+          .then(() => {
+            console.log("User signed out successfully");
+            // Additional actions after sign out, such as redirecting to another page
+          })
+          .catch((error) => {
+            console.error("Error signing out:", error);
+          });
+        }
+
     return (
         <nav className="relative flex flex-wrap items-center justify-between w-full group p-7 shrink-0 font-extrabold lg:text-2xl ">
             {/* Logotyp */}
@@ -13,7 +27,7 @@ function Navigation({ isOpen, setIsOpen }) {
             
             {/* Större skärmar - navigationslänkar */}
             <div className="items-center justify-between hidden gap-12 text-black md:flex">
-                <a className="text-lg font-normal hover:underline" href="">Jobs</a>
+                <a className="text-lg font-normal hover:underline" href="/jobs">jobs</a>
                 <p>|</p>
                 <a className="text-lg font-normal hover:underline" href="/about">About</a>
                 <p>|</p>
@@ -27,6 +41,7 @@ function Navigation({ isOpen, setIsOpen }) {
                 <a className="flex items-center px-4 py-2 text-lg font-bold hover:underline" href="/signup">
                     Sign Up
                 </a>
+                <button className="text-lg font-bold"  onClick={handleSignOut}>Sign Out</button>
             </div>
 
             {/* Hamburgermeny-ikon för mindre skärmar */}
@@ -38,12 +53,13 @@ function Navigation({ isOpen, setIsOpen }) {
 
             {/* Dropdownmeny för mindre skärmar */}
             <div className={`bg-mainBlue flex md:hidden transition-all duration-300 ease-in-out flex-col items-start shadow-main justify-center w-full gap-3 overflow-hidden bg-white ${isOpen ? 'max-h-64 py-4' : 'max-h-0 py-0' } px-4 rounded-2xl top-full`}>
-                <a className="text-sm font-normal hover:underline" href="/">Jobs</a>
+                <a className="text-sm font-normal hover:underline" href="/jobs">Jobs</a>
                 <a className="text-sm font-normal hover:underline" href="/about">About</a>
                 <a className="text-sm font-normal hover:underline" href="/contact">Contact</a>
                 
                <a className="flex items-center text-sm font-normal text-black" href="/login" >Log In</a> 
                 <a className="text-lg font-bold" href="/signup">Sign Up</a>
+                <button className="text-lg font-bold"  onClick={handleSignOut}>Sign Out</button>
             </div>
         </nav>
     );

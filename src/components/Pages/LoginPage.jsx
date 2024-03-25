@@ -10,7 +10,7 @@ function LoginPage() {
     
       <Navigation />
      <LoginForm />
-      <Footer />
+    
     </>
   );
 }

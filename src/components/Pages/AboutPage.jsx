@@ -35,7 +35,7 @@ import Footer from "../footer";
           <Card src="/images/winner.png" alt="header image" label="Leading Site" />
         </div>
   </section>
-        <Footer />
+        
       </>
     );
   }

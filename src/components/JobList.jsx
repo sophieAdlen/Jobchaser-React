@@ -52,6 +52,7 @@ function JobList() {
   return (
     <>
     <Navigation />
+    <h1 className=" flex justify-center m-10 text-4xl font-extrabold lg:text-6xl">Job <span className="text-extraBlue">Search</span></h1>
     <SearchBar onSearch={handleSearch} /> 
     <main className="flex justify-center">
       <ul className="flex justify-center flex-wrap gap-10 m-10 max-w-800 " style={{ width: "1600px" }}>
@@ -124,7 +125,6 @@ function JobList() {
         </div>
       )}
    </main>
-      <Footer/>
       </>
   );
 }
