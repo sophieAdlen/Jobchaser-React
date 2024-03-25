@@ -6,10 +6,9 @@ import ContactPage from "./components/Pages/Contactpage";
 import LoginPage from "./components/Pages/LoginPage";
 import SignupPage from "./components/Pages/SignupPage";
 import { AuthContext } from './Context/Authcontext';
-import Header from './components/Header';
 import Footer from './components/Footer';
 import { useContext } from 'react';
-import { auth } from "./firebase-config";
+
 
 import "./App.css";
 
@@ -34,7 +33,6 @@ function App() {
   const isAuthenticated = authContext && authContext.user !== null;
   console.log("isAuthenticated", isAuthenticated)
 
-  console.log(isAuthenticated);
 
   return (
   
@@ -48,9 +46,9 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/jobs" element={<ProtectedRoute />}>
+        {/* <Route path="/jobs" element={<ProtectedRoute />}> */}
             <Route path="/jobs" element={<JobList />} />
-          </Route>
+          {/* </Route> */}
       </Routes>
       </main>
       <Footer />

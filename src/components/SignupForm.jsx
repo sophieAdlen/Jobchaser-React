@@ -219,7 +219,7 @@ const navigate = useNavigate();
                                     >
                                         REGISTER NOW
                                     </button>
-                                    <Link to="/login" className="mt-8 text-sm">Already have an account? <span className="font-semibold underline">Sign In</span> </Link>
+                                    <Link to="/login" className="mt-8 text-sm">Already have an account? <span className="font-semibold underline">Log In</span> </Link>
 
                                 </div>
                             </div>

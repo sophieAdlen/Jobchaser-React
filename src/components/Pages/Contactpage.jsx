@@ -1,5 +1,4 @@
 import Navigation from "../Navbar"
-import Footer from "../footer"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faEnvelope, faPhone, faMapLocation, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 
@@ -9,7 +8,7 @@ function Contact() {
   return (
     <>
     <Navigation />
-    <div className="contact-main flex items-center justify-center py-10 ">
+    <div className="contact-main min-w-screen min-h-screen  flex items-center justify-center px-5 py-5 ">
       <div className="max-w-6xl shadow-2xl  rounded-lg">
         <div className="grid md:grid-cols-2 items-center gap-16 sm:p-10 p-4 ">
           <div>
