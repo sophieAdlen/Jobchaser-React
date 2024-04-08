@@ -1,43 +1,40 @@
-import { useForm } from "react-hook-form";
+import React from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
-import {createUserWithEmailAndPassword} from "firebase/auth";
-import {auth} from "../firebase-config";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase-config";
 
-
+interface FormData {
+  email: string;
+  password: string;
+  confirmPassword: string;
+}
 
 function SignupForm() {
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors }
-    } = useForm();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors }
+  } = useForm<FormData>();
 
+  const onSubmit: SubmitHandler<FormData> = (data) => {
+    console.log("Form Submitted: ", data);
 
-    const onSubmit = (data) => {
-        console.log("Form Submitted: ", data);
-        
-        // ropa på firebase sign up funktion
-        createUserWithEmailAndPassword(auth, data.email,data.password)
-  .then(() => {
-    // Signed up 
-    navigate("/login")
-    // ...
-  })
-  .catch((error) => {
-    console.error("Error creating user", error);
-    
-  });
-
-        
-
-
-    };
-
+    // Call Firebase sign up function
+    createUserWithEmailAndPassword(auth, data.email, data.password)
+      .then(() => {
+        // Signed up 
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.error("Error creating user", error);
+      });
+  };
     return (
 
         <section className="min-w-screen min-h-screen bg-gray-900 flex items-center justify-center px-5 py-5">

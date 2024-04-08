@@ -1,13 +1,14 @@
 
+import React from "react";
 import Card from "../AboutCards";
 import Navigation from "../Navbar";
-import Footer from "../footer";
+
 
 
   function AboutPage() {
     return (
       <>
-        <Navigation />
+        <Navigation isOpen={undefined} setIsOpen={undefined} />
     <section className="py-10 h-lvh">
         <div className="bg-white mt-20 ">
           <div className="max-w-4xl p-6 text-center mx-auto">

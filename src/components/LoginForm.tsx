@@ -6,19 +6,24 @@ import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase-config";
 
-function LoginForm() {
+interface LoginFormProps {}
+
+type FormData = {
+  email: string;
+  password: string;
+  userNotFound?: string;
+}
+
+function LoginForm(props: LoginFormProps) {
   const [showPassword, setShowPassword] = useState(false);
-  const { register, handleSubmit, formState: { errors }, setError } = useForm();
+  const { register, handleSubmit, formState: { errors }, setError } = useForm<FormData>();
   const navigate = useNavigate();
 
-  const onSubmit = (data) => {
-    console.log("Form submitted:", data); // handle form submission here
-
+  const onSubmit = (data: FormData) => {
     const { email, password } = data;
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in 
         const user = userCredential.user;
         console.log("User signed in:", user);
         navigate("/");
@@ -27,7 +32,7 @@ function LoginForm() {
         console.error("Error logging in", error);
         setError("userNotFound", {
           type: "manual",
-          message: "User not found" // Anpassat felmeddelande för användaren
+          message: "User not found"
         });
       });
   };

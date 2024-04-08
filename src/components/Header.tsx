@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navigation from './Navbar'; 
+import Navigation from './Navbar';
 
 
 function Header() {

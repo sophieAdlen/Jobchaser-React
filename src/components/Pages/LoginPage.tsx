@@ -1,6 +1,5 @@
-
+import React from "react";
 import Navigation from "../Navbar";
-import Footer from "../Footer";
 import LoginForm from "../LoginForm";
 
 function LoginPage() {
@@ -8,7 +7,7 @@ function LoginPage() {
   return (
     <>
     
-      <Navigation />
+      <Navigation isOpen={undefined} setIsOpen={undefined} />
      <LoginForm />
     
     </>

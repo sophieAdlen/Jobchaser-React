@@ -1,5 +1,5 @@
+import React from "react";
 import Navigation from "../Navbar";
-import Footer from "../Footer";
 import SignupForm from "../SignupForm"
 
 
@@ -8,7 +8,7 @@ function SignupPage() {
 
   return (
     <>
-      <Navigation />
+      <Navigation isOpen={undefined} setIsOpen={undefined} />
       <SignupForm />
   </>
 );

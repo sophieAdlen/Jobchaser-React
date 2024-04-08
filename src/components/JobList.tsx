@@ -1,24 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import Navigation from './Navbar';
-import Footer from './Footer';
+
 import SearchBar from './SearchBar';
+import { Button } from 'bootstrap';
+import Buttons from './buttons';
+
+type Job ={
+  id: number;
+  position: string;
+  company: string;
+  location: string;
+  role: string;
+  contract: string;
+  level: string;
+  languages: string[];
+  tools: string[];
+  postedAt: string;
+  logo: string;
+}
 
 function JobList() {
-  const [showPopup, setShowPopup] = useState(false);
-  const [selectedJob, setSelectedJob] = useState(null);
-  const [jobs, setJobs] = useState([]); // State för alla jobb
-  const [filteredJobs, setFilteredJobs] = useState([]); // State för filtrerade jobb
+  const [showPopup, setShowPopup] = useState<boolean>(false);
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [jobs, setJobs] = useState<Job[]>([]); 
+  const [filteredJobs, setFilteredJobs] = useState<Job[]>([]);
 
   useEffect(() => {
     // Fetch data from JSON file
     fetch("./data.json")
       .then((response) => response.json())
       .then((data) => {
-        setJobs(data); // Uppdatera alla jobb från JSON-filen
-        setFilteredJobs(data); // Initialt visas alla jobb
+        setJobs(data); 
+        setFilteredJobs(data); 
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
+
+
 
   // Funktion för att hantera sökningen
   const handleSearch = (term) => {
@@ -51,9 +69,10 @@ function JobList() {
 
   return (
     <>
-    <Navigation />
+    <Navigation isOpen={undefined} setIsOpen={undefined} />
     <h1 className=" flex justify-center m-10 text-4xl font-extrabold lg:text-6xl">Job <span className="text-extraBlue">Search</span></h1>
     <SearchBar onSearch={handleSearch} /> 
+    <Buttons />
     <main className="flex justify-center">
       <ul className="flex justify-center flex-wrap gap-10 m-10 max-w-800 " style={{ width: "1600px" }}>
         {filteredJobs.map((job) => (
@@ -91,7 +110,7 @@ function JobList() {
       {/* Popup rutan */}
       {showPopup && (
         <div className="popup">
-            <button className="close-btn absolute top-0 right-0 " onClick={closePopup} aria-label={close}>Close</button>
+            <button className="close-btn absolute top-0 right-0 " onClick={closePopup}>Close</button>
           <div className="popup-content">
            <h2 className='text-2xl mb-8'>Job Description</h2>
            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam natus accusamus! 

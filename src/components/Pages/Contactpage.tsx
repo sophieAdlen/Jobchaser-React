@@ -1,4 +1,4 @@
-import Navigation from "../Navbar"
+import Navigation from "../Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faEnvelope, faPhone, faMapLocation, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 
@@ -7,7 +7,7 @@ import React from 'react';
 function Contact() {
   return (
     <>
-    <Navigation />
+    <Navigation isOpen={undefined} setIsOpen={undefined} />
     <div className="contact-main min-w-screen min-h-screen  flex items-center justify-center px-5 py-5 ">
       <div className="max-w-6xl shadow-2xl  rounded-lg">
         <div className="grid md:grid-cols-2 items-center gap-16 sm:p-10 p-4 ">
@@ -69,7 +69,7 @@ function Contact() {
               <div className="flex flex-wrap -mx-3 mb-6">
                 <div className="w-full px-3">
                   <label htmlFor="message" className="px-1 text-sm font-semibold  ">Message</label>
-                  <textarea id="message" rows="6" placeholder="Your Message" className="no-resize appearance-none w-full mb-3 leading-tight text-md  px-3 py-2 rounded-lg shadow-md focus:outline-none"></textarea>
+                  <textarea id="message" rows={6} placeholder="Your Message" className="no-resize appearance-none w-full mb-3 leading-tight text-md  px-3 py-2 rounded-lg shadow-md focus:outline-none"></textarea>
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-6">
