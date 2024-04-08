@@ -37,3 +37,4 @@ function SearchBar({ onSearch }: SearchBarProps) {
 }
 
 export default SearchBar;
+
