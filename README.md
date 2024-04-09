@@ -1,21 +1,23 @@
-Veckans (v.12) teoretiska frågor 
+Veckans (v 14-15) teoretiska frågor 
 
-## Vad menas med Reacts ekosystem?
+## Vad är Redux Toolkit? 
+Redux Toolkit kan beskrivas som ett verktygspaket som förenklar hanteringen av tillstånd och flöde i redux-baserade applikationer genom att tillhandahålla fördefinerade funktioner och konverttioner för att skriva Redux-kod mer effektivt och mindre repetitivt.
 
-React ekosystem omfattar alla biblotek. Verktyg, verktygslådor som nvänds tillsammans med react för att bygga webbapplikationer, nclusive tillägg, utvecklingsverktyg och tillämpningar
+## När, i vilka situationer vill man använda Redux Toolkit?
+Man vill använda Redux toolkit i situationer där man behöver hantera komplexa illstånd i en aplikation med Redux. det är särskilt användbart för att minska mängden boilerplate-kod och för att göra redux-konfiguation och användning mer strukturerad och lättförståelig.
 
-## Nämn några andra viktiga bibliotek i Reacts ekosystem förutom React Router och React Hook Form
 
-Några andra viktiga biblotek I reacts ekosystem är redux för tillståndshantering, styled components för styling och Axios för formulärhantering I react-applicationer.
+## Beskriv typiska områden hur man använder Typescript i React? (ex props, event, useReducer, etc)
+Vid användandet av TypeScript i React kan man dra nytta av dess statiska typning för att öka tillförlitligheten och underhållbarheten hos koden. Typiska områden för användning av TypeScript i React inkluderar:
 
-## Vad är fördelen med att använda React Hook Form?
+## Props: 
+Definiera typer för props som komponenter tar emot för att säkerställa korrekt användning och förhindra felaktig användning.
 
-Fördelar med att använda React Hook Form är tatt det erbjuder en enkel och effektiv lösning för formulärhantering I react applikationer, med minskad kodkomplexitet och bättre prestanda
+## Event: 
+Använda typer för händelser och händelseresor för att garantera korrekt hantering och förhindra oförutsägbara beteenden.
 
-## Vad är syftet med useContext? Vilket problem med props löser den?
+ ## useState 
+och useReducer: Ange typer för tillstånd och åtgärder som används med useState och useReducer-hooks för att underlätta utveckling och minska risken för buggar genom att fånga fel vid kompileringstid.
 
-UseContext I react används för att dela data mellan komponenter utan att behöva passera props genom hela komponenttrdet. Det löser problemet med “Props drilling” genom att tillhandahålla en enklare och mer effektive metod för att hantera delad state.
-
-## Vilka fördelar finns det att använda Tailwind / nackdelar?
-
-Fördelarna med att använda tailwind CSS inkluderar snabbare utvecklingstid. En nackdel kan kan vara att de blir en ökad filstorlek och en inlärningskurvan för att anpasa sig till dess 
+## Redux:
+ Använda typer för Redux-åtgärder, tillstånd och reducers för att säkerställa att Redux-flödet är korrekt typat och att reducerare och åtgärder används på ett konsekvent sätt.
