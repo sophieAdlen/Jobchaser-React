@@ -54,6 +54,7 @@ function JobList() {
   return (
     <>
      <Navigation isOpen={undefined} setIsOpen={undefined} />
+     <h1 className="flex justify-center m-10 text-4xl font-extrabold lg:text-6xl">Job <span className="text-extraBlue">Search</span></h1>
       <SearchBar onSearch={handleSearch} />
       <Buttons />
       <main className="flex justify-center">
